@@ -27,3 +27,21 @@ output "iot_endpoint" {
 }
 
 ```
+
+## Certificate as PEM
+
+```
+terraform output -json | jq -r '.certificate_pem.value'
+```
+
+## Certificate private key
+
+```
+terraform output -json | jq -r '.certificate_private_key.value'
+```
+
+## Certificate public key
+
+```
+terraform output -json | jq -r '.certificate_public_key.value'
+```
